@@ -23,6 +23,8 @@ helm --debug upgrade --install jira ./jira-$VERSION.tgz \
 --set jira.clustering.enabled=true \
 --set volumes.localHome.persistentVolumeClaim.create=true \
 --set volumes.localHome.persistentVolumeClaim.storageClassName=generic \
+--set volumes.sharedHome.persistentVolumeClaim.create=true \
+--set volumes.sharedHome.persistentVolumeClaim.storageClassName=nfs \
 --create-namespace \
 --namespace jira
 
