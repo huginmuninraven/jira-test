@@ -12,7 +12,7 @@
 # helm search repo atlassian-data-center
 
 # VERSION
-# VERSION="1.4.1"
+VERSION="1.4.1"
 
 # Download the version set above
 # helm pull atlassian-data-center/jira --version $VERSION
@@ -21,8 +21,8 @@
 helm --debug upgrade --install jira ./jira-$VERSION.tgz \
 --set image.tag=8.20.9 \
 --set jira.clustering.enabled=true \
---set requests.cpu=2 \
---set requests.memory=2G \
+--set volumes.localHome.persistentVolumeClaim.create=true \
+--set volumes.localHome.persistentVolumeClaim.storageClassName=generic \
 --create-namespace \
 --namespace jira
 
