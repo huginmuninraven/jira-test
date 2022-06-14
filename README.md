@@ -1,16 +1,11 @@
 # This is a test Jira installation that shows how to configure certain flags. 
 
 
-## Requests
-
-https://atlassian.github.io/data-center-helm-charts/userguide/resource_management/REQUESTS_AND_LIMITS/
-
-
-
 # Done 
 
 - resources/requests (Already set in the Helm chart)
 - check JVM settings (Already set in the Helm chart)
+  - https://atlassian.github.io/data-center-helm-charts/userguide/resource_management/REQUESTS_AND_LIMITS/
 
 
 # TO DO
